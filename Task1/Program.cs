@@ -19,41 +19,15 @@ namespace Task1
         static void Main(string[] args)
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
-            Type[] type = assembly.GetTypes();            
-            string KnockOnDoor(Type t)
-            {
-                AccessLevelAttribute a = null;
-                string str = null;
-                if (t.BaseType == typeof(Proffession))
-                {
-                    object[] attr = (object[])t.GetCustomAttributes(typeof(AccessLevelAttribute), false);
-                    foreach (object item in attr)
-                    {
-                        a = item as AccessLevelAttribute;
-                        switch (a.Level)
-                        {
-                            case AccessLevel.Lowlevel:
-                                return str = String.Format("{0} Ваш доступ минимален", t.Name);
-                            case AccessLevel.MidleLevel:
-                                return str = String.Format("{0} Ваш доступ не полный", t.Name);
-                            case AccessLevel.HighLevel:
-                                return str = String.Format("{0} Ваш доступ не ограничен", t.Name);
-                        }
-                    }
-                }
-                return "";
-            }
+            Type[] type = assembly.GetTypes();
             Director director = new Director("Bob");            
             Programmer programmer = new Programmer("Dima");
             programmer.Name = "Evgeny";        
-            Manager manager = new Manager("Yana");
-
-
-            Console.WriteLine(director.Name + " " + KnockOnDoor(director.GetType()));
-            Console.WriteLine(programmer.Name + " " + KnockOnDoor(programmer.GetType()));
-            Console.WriteLine(manager.Name + " " + KnockOnDoor(manager.GetType()));
-
-
+            Manager manager = new Manager("Yana");  
+            Console.WriteLine(director.Name + " " + director.KnockOnDoor());
+            Console.WriteLine(programmer.Name + " " + programmer.KnockOnDoor());
+            Console.WriteLine(manager.Name + " " + manager.KnockOnDoor());
+            Console.WriteLine("Для выхода нажмите любую кнопку...");
             Console.ReadKey();
         }
     }
