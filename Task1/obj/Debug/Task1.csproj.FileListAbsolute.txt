@@ -1,0 +1,7 @@
+E:\Атрибуты\Attribute\Task1\bin\Debug\Task1.exe.config
+E:\Атрибуты\Attribute\Task1\bin\Debug\Task1.exe
+E:\Атрибуты\Attribute\Task1\bin\Debug\Task1.pdb
+E:\Атрибуты\Attribute\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+E:\Атрибуты\Attribute\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+E:\Атрибуты\Attribute\Task1\obj\Debug\Task1.exe
+E:\Атрибуты\Attribute\Task1\obj\Debug\Task1.pdb
