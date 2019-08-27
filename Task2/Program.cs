@@ -13,7 +13,8 @@ namespace Task2
             MyClass instance = new MyClass();
             instance.MethodWarning();
             //для проверки раскоментировать
-            //instance.MethodError();            
+            //instance.MethodError();    
+            Console.ReadKey();
         }
     }
 }
